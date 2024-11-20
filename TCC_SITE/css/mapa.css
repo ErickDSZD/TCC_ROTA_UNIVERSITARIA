@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Body and general styles */
+body {
+    font-family: 'Roboto', 'Public-Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Map container */
+#map {
+    height: 100%;
+    width: 70%;
+    border: 2px solid #ff914d;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Location container */
+#location {
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    border-left: 2px solid #ff914d;
+    background-color: #fff;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Header styles */
+h1 {
+    font-size: 2em;
+    color: #ff914d;
+    text-shadow: 1px 1px 2px #ccc;
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Location info */
+#location-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#location-info p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* Faculdade info */
+.faculdade-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faculdade-info h2 {
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.faculdade-info p {
+    margin: 2px 0;
+}
+
+/* Loading text */
+#loading {
+    display: none;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ff914d;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Botão de voltar */
+#voltar, #voltar_inicial {
+    background-color: #ff914d;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#voltar img, #voltar_inicial img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#voltar:hover, #voltar_inicial:hover {
+    background-color: #f2513f;
+    transform: scale(1.05);
+}
+
+#voltar:active {
+    background-color: #4ebc6e;
+    transform: scale(0.95);
+}
+
+#voltar:focus {
+    outline: none;
+}
+
+#voltar img {
+    filter: brightness(0) invert(1); /* Ensures the arrow icon is white */
+}
+
+/* Popup styles */
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.leaflet-popup-tip {
+    background: #fff;
+}
+
+.leaflet-container a {
+    color: #ff914d;
+}
+
+/* Mostrar os cursos */
+
+.course-name {
+    position: relative;
+    padding: 15px 20px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os blocos de cursos */
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
+    border: 1px solid #ccc; /* Borda mais leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+.course-name:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.course-name h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px; /* Tamanho da fonte ajustado */
+    font-weight: 600;
+    color: #333; /* Cor do texto */
+}
+
+.course-name .heart {
+    position: absolute; /* Posicionamento absoluto para alinhamento preciso */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    font-size: 30px; /* Tamanho da estrela */
+    color: #e74c3c; /* Cor da estrela */
+    transition: color 0.3s ease; /* Transição suave da cor no hover */
+    cursor: pointer;
+}
+
+.course-name .heart:hover {
+    color: #c0392b; /* Cor mais escura no hover */
+}
+

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffbf3; /* Tom mais claro do amarelo (#ffecc7) */
+    font-family: 'Roboto', 'Public Sans', sans-serif;
+    color: #ff914d; /* Cor neutra para o texto */
+}
+
+/* LINK HOME */
+.a_home {
+    width: 50px;
+    cursor: pointer;
+}
+
+.home {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s;
+}
+
+.a_home:hover .home {
+    filter: brightness(1.2);
+}
+
+/* Estilo do main */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Branco para destacar o conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black; /* Cor do título */
+}
+
+.containerh2 {
+    font-size: 1.5em;
+    color: gray; 
+    margin-bottom: 15px;
+}
+
+/* Estilo para a informação de pesquisa */
+.pesquisa-info {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Fundo leve para destacar */
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.pesquisa-info p {
+    font-size: 1.2em; /* Tamanho da fonte maior */
+    color: #333; /* Cor do texto */
+    margin: 0;
+}
+
+.pesquisa-info strong {
+    color: #f2513f; /* Cor para destacar o termo pesquisado */
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixa a posição do modal */
+    z-index: 1; /* Fica acima do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolar se o conteúdo for maior que a tela */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo escura */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ajuste conforme necessário */
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para o corpo do modal */
+#modal-body {
+    font-size: 16px;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* Estilo para os cursos */
+#modal-body h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #f2513f; /* Cor do título do curso */
+}
+
+#modal-body p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #f2513f; /* Barra lateral para destacar o curso */
+    border-radius: 5px;
+}
+
+/* Estilo dos cartões das faculdades */
+.faculdade-card {
+    background: #ffffff; /* Branco para clarear o visual */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    margin-bottom: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e0e0e0; /* Borda sutil */
+}
+
+.faculdade-card:hover {
+    transform: scale(1.03); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+}
+
+/* Nome da faculdade */
+.faculdade-name {
+    font-size: 1.5em;
+    color: #f2513f; /* Laranja para o nome da faculdade */
+    display: flex;
+    align-items: center; /* Alinha a estrela verticalmente */
+    justify-content: space-between;
+    margin-bottom: 10px; /* Espaçamento abaixo do nome */
+    font-weight: bold; /* Negrito para o nome */
+}
+
+/* Detalhes da faculdade */
+.faculdade-details {
+    font-size: 1em;
+    color: #7f8c8d; /* Cinza claro para os detalhes */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.star:hover {
+    transform: scale(1.03);
+}
+
+/* Mostrar os cursos */
+
+.course-name {
+    position: relative;
+    padding: 15px 20px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os blocos de cursos */
+    background-color: #f9f9f9; /* Cor de fundo mais suave */
+    border: 1px solid #ccc; /* Borda mais leve */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+}
+
+.course-name:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.course-name h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px; /* Tamanho da fonte ajustado */
+    font-weight: 600;
+    color: #333; /* Cor do texto */
+}
+
+.course-name .heart {
+    position: absolute; /* Posicionamento absoluto para alinhamento preciso */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    font-size: 30px; /* Tamanho da estrela */
+    color: #e74c3c; /* Cor da estrela */
+    transition: color 0.3s ease; /* Transição suave da cor no hover */
+    cursor: pointer;
+}
+
+.course-name .heart:hover {
+    color: #c0392b; /* Cor mais escura no hover */
+}
+

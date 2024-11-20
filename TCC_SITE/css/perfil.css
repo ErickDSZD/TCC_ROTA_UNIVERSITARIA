@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f2513f;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    display: inline;
+    margin: 0;
+    font-size: 24px;
+}
+
+.header .button {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+}
+
+.header .button-home {
+    background-color: #4ebc6e;
+}
+
+.header .button-logout {
+    background-color: #ff914d;
+}
+
+.header .button-delete {
+    background-color: #d33;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4ebc6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #3da75b;
+}

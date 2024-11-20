@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Public Sans', sans-serif; /* Adiciona uma fonte genérica como fallback */
+    background-image: url('padrao.png'); /* Imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+
+h1 {
+    color: #f2513f;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Topo - texto + imagem */
+
+.login-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%; /* Garante que a largura da caixa não exceda o limite */
+    padding: 2rem; /* Ajustado para proporcionar um espaço adequado dentro da caixa */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 100%; /* Garante que o formulário ocupe a largura total da .login-container */
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    padding-bottom: 10px;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    border: 2px solid #f6a23b; /* Cor da borda dos campos de entrada */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff; 
+    padding: 0.75rem; /* Adiciona preenchimento interno */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #f2513f; /* Cor da borda ao focar no campo */
+    box-shadow: 0 0 8px rgba(242, 81, 63, 0.6); /* Sombra ao focar no campo */
+}
+
+button[type="submit"] {
+    background-color: #f2513f; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte do botão */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o texto no botão */
+}
+
+button:hover {
+    background-color: #e68a00; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+}
+
+button:active {
+    transform: translateY(1px); /* Efeito de clique do botão */
+}
+
+/* LINK HOME */
+.a_home {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    width: auto; /* Ajuste automático para o tamanho */
+    margin-left: 60px; /* Espaçamento à esquerda */
+    cursor: pointer;
+    transition: transform 0.3s; /* Transição suave para efeitos */
+}
+
+.a_home:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* IMAGEM HOME */
+.home {
+    width: 24px; /* Tamanho mais adequado */
+    height: 24px; /* Manter a proporção */
+    transition: filter 0.3s; /* Transição suave para efeitos */
+}
+
+.a_home:hover .home {
+    filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
+}
